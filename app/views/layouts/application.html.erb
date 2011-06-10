@@ -40,22 +40,6 @@
         <%= yield %>
       
         <aside>
-          <dl class="tag_list" id="categories">
-            <dt><strong>¿De qué se habla?</strong></dt>
-            <dd>
-              <ul>
-                <% hot_categories.each_with_index do |category, index| %>
-                <li class="category">
-                  <%= link_to category.name, [category, :proposals], :class => "name tag-#{index + 1}", :title => category.name %>
-                  <span class="count">
-                    <%= category.proposals_count %>
-                  </span>
-                </li>
-                <% end %>
-              </ul>
-            </dd>
-          </dl>
-
           <dl class="tag_list" id="proposers">
             <dt><strong>¿Quién propone?</strong></dt>
             <dd>
