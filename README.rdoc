@@ -1,21 +1,22 @@
-= AgoraOnRails
+= Minumum Consensus AgoraOnRails
 
-* http://agoraonrails.com
+* http://consensodeminimos.agoraonrails.com/
 
 == Description:
 
-AgoraOnRails aims to revolutionize democracy by empowering citizens to directly vote real proposals
-extracted from the Spanish Congress official web page http://www.congreso.es/portal/page/portal/Congreso/Congreso/Iniciativas
+Application to vote with your electronic ID the minimum consensus reached at the #spanishrevolution.
 
 == Install and Use:
 
-    git clone git://github.com/PartidoDeInternet/AgoraOnRails.git
+    git clone git://github.com/voodoorai2000/15MAgoraOnRails.git
 
-    cd AgoraOnRails
+    cd 15MAgoraOnRails
 
-    bundle install
+    bundle
     
-    rake agoraonrails:setup
+    rake db:migrate
+    
+    rake db:seed
     
     rails server
     
@@ -72,8 +73,9 @@ extracted from the Spanish Congress official web page http://www.congreso.es/por
   Enrique Macip
   
   Jorge Dias
+  
+  Carlos Geijo
    
 == License:
 
-Copyright (c) 2011 Partido de Internet, released under the MIT license
-
+Copyright (c) 2011 AgoraOnRails, released under the MIT license.
