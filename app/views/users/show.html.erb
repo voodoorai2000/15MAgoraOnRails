@@ -1,17 +1,5 @@
 <% @title = "#{@user.name}" %>  
 <% @current_tab = "Ciudadanos" %>
 
-<% if current_user && current_user.spokesman == @user %>
-  <%= form_for @user, :url => discharge_as_spokesman_user_path(@user) do |f| -%>
-     <%= submit_tag "Destituir a #{h @user.name} de ser mi portavoz", :id => "discharge_spokesman_button", :class => "discharge-my-spokesman" %>
-   <% end -%>
-<% else %>
-  <% unless current_user == @user %>
-    <%= form_for @user, :url => choose_as_spokesman_user_path(@user) do |f| -%>
-      <%= submit_tag "Elegir a #{h @user.name} como mi portavoz", :id => "choose_spokesman_button", :class => "make-my-spokesman" %>
-    <% end -%>
-  <% end %>
-<% end %>  
-
 <%= render :partial => "proposal", :collection => @proposals %>
 
