@@ -8,10 +8,11 @@
   <!--[if lte IE 6]>
     <link rel="stylesheet" href="/stylesheets/populo-ie.css" type="text/css" media="screen" charset="utf-8"/>
   <![endif]-->
-  <%= javascript_include_tag 'jquery', 'jquery_tools', 'rails', 'application' %>
+  <%= javascript_include_tag 'jquery', 'jquery_tools', 'rails', 'application', 'pngfix' %>
   <%= csrf_meta_tag %>
   <%= render :partial => "shared/google_analytics" %>
   <%= yield :head %>
+  <script type="text/javascript">DD_belatedPNG.fix("#header h1");</script> 
 </head>
 <body>
 
@@ -31,6 +32,8 @@
               </ul>
             </nav>
           <% end %>
+			<h1>Agora #consensodeminimos</h1>
+			<h2>“Vota con tu DNIe el <strong>#consensodeminimos</strong> alcanzado en la <strong>#spanishrevolution</strong>, juntos podemos regenerar la <strong>Democracia</strong>”</h2>
         </section>
 
         <% flash.each do |key, value| %>

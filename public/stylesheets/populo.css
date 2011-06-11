@@ -134,7 +134,30 @@ fieldset {
   position: relative;
   display: block;
   padding: 25px 0;
-  background: url('../images/hr.gif') no-repeat bottom center;
+  /*background: url('../images/hr.gif') no-repeat bottom center;*/
+}
+
+#header h1 {
+  display: block;
+  float: left;
+  width: 503px;
+  height: 80px;
+  background: url('../images/agora_consensodeminimos.png') no-repeat;
+  overflow: hidden;
+  text-indent: -9000em;	
+}
+
+#header h2 {
+  display: block;
+  float: right;
+  width: 410px;
+  height: 44px;
+  padding-top: 16px;
+  overflow: hidden;
+  color: #5a5a59;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
 }
 
 #mini #header {
@@ -288,7 +311,9 @@ footer p {
   font-size: 0.9em;
 }
 
-
+#breadcrumb li a.active {
+  border-bottom: 3px solid #66b9af;
+}
 
 /* proposal */
 
