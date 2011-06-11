@@ -1,13 +1,8 @@
 <% @title = proposals_heading %>
-<section id="content">
-  <ul id="breadcrumb">
-    <li><%= link_to "Propuestas", proposals_path %></li>
-    <li><%= link_to "Ciudadanos", users_path %></li>
-  </ul>
 
   <header class="proposal-head">
     <strong><%= proposals_heading %></strong>
   </header>
   
   <%= render :partial => 'shared/proposal', :collection => @proposals %>
-</section>
+
