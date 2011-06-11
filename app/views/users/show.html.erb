@@ -1,5 +1,9 @@
 <% @title = "#{@user.name}" %>  
 <% @current_tab = "Ciudadanos" %>
 
+<header class="proposal-head">
+  <strong>Votos de <%= @user.name %></strong>
+</header>
+
 <%= render :partial => "proposal", :collection => @proposals %>
 

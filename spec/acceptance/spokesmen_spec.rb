@@ -32,6 +32,11 @@ feature "Spokesmen", %q{
     all('.user .name a').first.text.strip.should == "Mariano"
   end
     
+  scenario "View spokesman info" do
+    visit user_path(@user)
+    page.should have_content("Votos de #{@user.name}")
+  end
+  
   scenario "Choose spokesman" do
     fan_de_punset = create_user :name => "Fan de Punset"
     login_as @user
@@ -112,7 +117,6 @@ feature "Spokesmen", %q{
     end
 
   end
-
   
   scenario "View proposals voted by the user" do
     [["Ley Sinde",           "no",         "En contra",  "voted_against"], 
