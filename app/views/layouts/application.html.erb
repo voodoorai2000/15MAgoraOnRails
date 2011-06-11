@@ -50,21 +50,23 @@
         
         </section>
         
-        <aside>
-          <dl class="tag_list" id="voters">
-            <dt><strong>¿Quién vota?</strong></dt>
-            <dd>
-              <ul>
-                <% @users.each do |user| %>
-                  <li class="proposer">
-                    <%= link_to user.name, user, :class => "name", :title => user.name %>
-                  </li>
-                <% end %>
-              </ul>
-            </dd>
-          </dl>
-
-        </aside>
+        <% if @users.any? %>
+          <aside>
+            <dl class="tag_list" id="voters">
+              <dt><strong>¿Quién vota?</strong></dt>
+              <dd>
+                <ul>
+                  <% @users.each do |user| %>
+                    <li class="proposer">
+                      <%= link_to user.name, user, :class => "name", :title => user.name %>
+                    </li>
+                  <% end %>
+                </ul>
+              </dd>
+            </dl>
+          
+          </aside>
+        <% end %>
       
       </div>
     </div>
