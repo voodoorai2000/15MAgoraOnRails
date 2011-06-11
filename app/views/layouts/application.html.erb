@@ -40,8 +40,16 @@
           <div class="<%= key %>"><%= value %></div>
         <% end %>
         
-        <%= yield %>
-      
+        <section id="content">
+          <ul id="breadcrumb">
+            <li><%= link_to "Propuestas", proposals_path %></li>
+            <li><%= link_to "Ciudadanos", users_path %></li>
+          </ul>
+        
+          <%= yield %>
+        
+        </section>
+        
         <aside>
           <dl class="tag_list" id="voters">
             <dt><strong>¿Quién vota?</strong></dt>
