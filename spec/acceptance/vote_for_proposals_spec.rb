@@ -80,7 +80,7 @@ feature "Vote for proposals", %q{
     visit proposal_path(proposal)
     click_button "Sí"
 
-    page.should have_content("Autenticación con DNIe requerida")
+    page.should have_content("Para confirmar tu votación...")
     page.should_not have_css("button", :text => "Confirmar")
       
     login_as @user

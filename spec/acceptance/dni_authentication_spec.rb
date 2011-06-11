@@ -11,7 +11,7 @@ feature "DNI authentication", %q{
     user = create_user(:name => "Bad Ass Mother Fucking Real User")
     visit login_path
   
-    page.should have_css("input[@value='Identifícate con tu DNIe']")
+    page.should have_css("input[@value='identifícate con tu DNIe']")
     
     login_as user
     
@@ -21,7 +21,7 @@ feature "DNI authentication", %q{
   scenario "Valid authentication with new user" do
     visit login_path
   
-    page.should have_css("input[@value='Identifícate con tu DNIe']")
+    page.should have_css("input[@value='identifícate con tu DNIe']")
     
     register_as("Bad Ass Mother Fucking New User", "12345678V")
     

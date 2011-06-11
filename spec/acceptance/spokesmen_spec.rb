@@ -37,7 +37,7 @@ feature "Spokesmen", %q{
     page.should have_content("Votos de #{@user.name}")
   end
   
-  scenario "Choose spokesman" do
+  pending "Choose spokesman" do
     fan_de_punset = create_user :name => "Fan de Punset"
     login_as @user
     
@@ -50,7 +50,7 @@ feature "Spokesmen", %q{
     @user.spokesman.should == fan_de_punset
   end
   
-  scenario "Discharge spokesman" do
+  pending "Discharge spokesman" do
     zapatero = create_user :name => "Zapatero"
     @user.spokesman = zapatero
     @user.save!
@@ -67,7 +67,7 @@ feature "Spokesmen", %q{
     @user.spokesman.should == nil
   end
   
-  scenario "Display the correct button in a spokeman's page" do
+  pending "Display the correct button in a spokeman's page" do
     rajoy = create_user :name => "Rajoy"
     zapatero = create_user :name => "Zapatero"
     
@@ -84,7 +84,7 @@ feature "Spokesmen", %q{
     page.should_not have_css("#discharge_spokesman_button")
   end
   
-  scenario "Don't allow to choose spokesman unless user is logged in" do
+  pending "Don't allow to choose spokesman unless user is logged in" do
     fan_de_punset = create_user :name => "Fan de Punset"
     
     visit users_path
@@ -108,7 +108,7 @@ feature "Spokesmen", %q{
   end
 
   context "logged out" do
-    scenario "Don't allow to choose myself as a my own spokesman" do
+    pending "Don't allow to choose myself as a my own spokesman" do
       visit user_path(@user)            
       click_button "Elegir a #{@user.name} como mi portavoz"
       login_as @user
@@ -136,7 +136,7 @@ feature "Spokesmen", %q{
     end
   end
   
-  scenario "Update vote count when a spokesman is chosen" do
+  pending "Update vote count when a spokesman is chosen" do
     free_wifi = create_proposal :title => "Wifi Gratis en toda España"
     punset = create_user :name => "Punset" 
     create_vote :proposal => free_wifi, :user => punset, :value => "si"
@@ -161,6 +161,7 @@ feature "Spokesmen", %q{
   
   context "Change spokesman" do
     background do
+      pending "Change spokesman"
       @free_wifi = create_proposal :title => "Wifi Gratis en toda España"
       @free_cigars = create_proposal :title => "Puros Gratis en toda España"
       @punset = create_user :name => "Punset"
@@ -170,8 +171,7 @@ feature "Spokesmen", %q{
       create_vote :proposal => @free_cigars, :user => @rajoy, :value => "si"
     end
     
-    scenario "Update vote count" do
-    
+    pending "Update vote count" do
       login_as @fan_de_punset
       visit user_path(@rajoy)
       click_button "Elegir a Rajoy como mi portavoz"
@@ -236,6 +236,7 @@ feature "Spokesmen", %q{
   end  
   
   scenario "Update vote count when a spokesman is discharged" do
+    pending "Update vote count when a spokesman is discharged"
     zapatero = create_user :name => "Zapatero" 
     @user.spokesman = zapatero
     @user.save!
@@ -262,6 +263,7 @@ feature "Spokesmen", %q{
   end
     
   scenario "Update vote percentages when a spokesman is chosen/discharged" do    
+    pending "Update vote percentages when a spokesman is chosen/discharged"
     free_wifi = create_proposal :title => "Wifi Gratis en toda España"
     punset = create_user :name => "Punset" 
     telefonica = create_user :name => "Telefonica" 
@@ -285,7 +287,7 @@ feature "Spokesmen", %q{
 
   context "Transitive delegation" do
     
-    scenario "Spokesman chooses spokesman" do
+    pending "Spokesman chooses spokesman" do
       punset = create_user :name => "Punset"
       fan_de_punset = create_user :name => "Fan de Punset", :spokesman => punset
     
@@ -300,7 +302,7 @@ feature "Spokesmen", %q{
       @user.spokesman.should == fan_de_punset
     end
 
-    scenario "Update vote count when a transitive spokesman is chosen" do
+    pending "Update vote count when a transitive spokesman is chosen" do
       free_wifi = create_proposal :title => "Wifi Gratis en toda España"
       punset = create_user :name => "Punset"
       fan_de_punset = create_user :name => "Fan de Punset"
@@ -323,7 +325,7 @@ feature "Spokesmen", %q{
       end
     end
     
-    scenario "Update vote count when a transitive spokesman is discharged" do
+    pending "Update vote count when a transitive spokesman is discharged" do
       free_wifi = create_proposal :title => "Wifi Gratis en toda España"
       punset = create_user :name => "Punset"
       fan_de_punset = create_user :name => "Fan de Punset", :spokesman => punset
@@ -343,7 +345,7 @@ feature "Spokesmen", %q{
       page.should have_css(".in_favor span.vote_percentage", :text => "100%") 
     end
     
-    scenario "Delegation cycles are allowed but doesn't count votes if nobody votes" do
+    pending "Delegation cycles are allowed but doesn't count votes if nobody votes" do
       free_wifi = create_proposal :title => "Wifi Gratis en toda España"
       punset = create_user :name => "Punset", :spokesman => @user
       fan_de_punset = create_user :name => "Fan de Punset", :spokesman => punset
@@ -360,7 +362,7 @@ feature "Spokesmen", %q{
       page.should have_css(".abstention span.vote_count", :text => "0 votos")
     end
     
-    scenario "Delegation cycles count votes if one spokesman votes" do
+    pending "Delegation cycles count votes if one spokesman votes" do
       free_wifi = create_proposal :title => "Wifi Gratis en toda España"
       punset = create_user :name => "Punset", :spokesman => @user
       fan_de_punset = create_user :name => "Fan de Punset", :spokesman => punset
@@ -378,7 +380,7 @@ feature "Spokesmen", %q{
       page.should have_css(".abstention span.vote_count", :text => "0 votos")
     end
     
-    scenario "Delegation cycles count votes if two spokesman votes" do
+    pending "Delegation cycles count votes if two spokesman votes" do
       free_wifi = create_proposal :title => "Wifi Gratis en toda España"
       punset = create_user :name => "Punset", :spokesman => @user
       fan_de_punset = create_user :name => "Fan de Punset", :spokesman => punset

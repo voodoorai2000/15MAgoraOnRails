@@ -6,9 +6,9 @@
 	</header>
 	<% for user in @users do %>
 		<article class="proposal">
-			<section class="proposal-content">
+			<section class="proposal-content user">
 				<header>
-					<h2 class="title"><%= link_to user.name, user %></h2>
+					<h2 class="title name"><%= link_to user.name, user %></h2>
 				</header>
 			</section>
 			<section class="voters">
