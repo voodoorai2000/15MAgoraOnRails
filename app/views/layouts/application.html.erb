@@ -51,8 +51,8 @@
         </section>
         
         <% if @users %>
-          <aside>
-            <dl class="tag_list" id="voters">
+          <aside id="voters">
+            <dl class="tag_list">
               <dt><strong>¿Quién vota?</strong></dt>
               <dd>
                 <ul>
@@ -64,7 +64,7 @@
                 </ul>
               </dd>
             </dl>
-          
+            <%= link_to "VER TODOS", users_path %>
           </aside>
         <% end %>
       

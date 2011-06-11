@@ -92,6 +92,13 @@ feature "Voters", %q{
         all('li').first.text.strip.should == "Ignacio Escolar"
       end
     end
+    
+    scenario "See all citizens" do
+      within(:css, "#voters") do
+        click_link "VER TODOS"
+        page.current_path.should == users_path
+      end
+    end
   end
   
 end
