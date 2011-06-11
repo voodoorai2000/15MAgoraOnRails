@@ -694,9 +694,9 @@ button.abstencion span {
   z-index:10000;
   background: #E1E2DF url('../images/content.gif');
   width:650px;
-  height:320px;
+  height:420px;
   -moz-box-shadow:0 0 4px 5px #CCC;
-  -webkit-box-shadow: 0 0 4px #CCC;
+  -webkit-box-shadow: 0 0 4px 5px #CCC;
 }
 
 #overlay-inner {
@@ -730,16 +730,27 @@ button.abstencion span {
 }
 
 .confirmation-message {
-  padding-bottom: 20px;
+  padding: 20px 10px 40px 10px;
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 1.75em;
 }
 
-.confirmation-message strong{
+/*.confirmation-message strong{
   display: block;
   font-size: 3em;
   padding: 25px 0;
   margin-bottom: 10px;
   text-align: center;
   color: #333;
+  background: #66B9AF;
+}*/
+
+.confirmation-message strong{
+  display: inline;
+  font-size: 1.25em;
+  padding: 3px;
+  color: #FFF;
   background: #66B9AF;
 }
 

@@ -1,8 +1,7 @@
 <h2>Revisa tu voto</h2>
 
 <p class="confirmation-message">
-  <strong>Vas <%= confirmation_text(params[:value]) %></strong>
-  la iniciativa “<%= @proposal.title %>”
+  <strong>Vas <%= confirmation_text(params[:value]) %></strong> la iniciativa “<%= @proposal.title %>”
   
   <% unless params[:explanation].blank? %>
     <p>Porque <%= params[:explanation] %></p>
