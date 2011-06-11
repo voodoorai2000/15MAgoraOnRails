@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => :choose_as_spokesman
-
+  before_filter :load_users
+  
   def index
     @users = User.all
   end

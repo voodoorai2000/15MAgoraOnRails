@@ -1,6 +1,7 @@
 class ProposalsController < InheritedResources::Base
   before_filter :check_is_admin, :only => :toggle
-
+  before_filter :load_users
+  
   belongs_to :category, :proposer, :polymorphic => true, :optional => true
   
   helper_method :parent, :parent_type
