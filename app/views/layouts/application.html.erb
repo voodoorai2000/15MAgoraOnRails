@@ -39,25 +39,6 @@
         
         <%= yield %>
       
-        <aside>
-          <dl class="tag_list" id="proposers">
-            <dt><strong>¿Quién propone?</strong></dt>
-            <dd>
-              <ul>
-                <% hot_proposers.each_with_index do |proposer, index| %>
-                <li class="proposer">
-                  <%= link_to proposer.name, [proposer, :proposals], :class => "name tag-#{index + 1}", :title => proposer.name %>
-                  <span class="count">
-                    <%= proposer.proposals_count %>
-                  </span>
-                </li>
-                <% end %>
-              </ul>
-            </dd>
-          </dl>
-
-        </aside>
-      
       </div>
     </div>
   </div>
