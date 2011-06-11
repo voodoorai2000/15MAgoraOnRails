@@ -8,11 +8,13 @@
   Has elegido a tu portavoz.
   <% end %>
   </strong>
-  Si nadie lo remedia en 5 segundos te llevaremos a la página de tu portavoz.
 </p>
 
+<p>
+  Si nadie lo remedia en 3 segundos te llevaremos a los resultados.
+</p>
 
 <script type="text/javascript" charset="utf-8">
-  var t = setTimeout("top.document.location.href = '<%= user_path current_user.spokesman %>'", 5000);
+  var t = setTimeout("top.document.location.href = '<%= user_path current_user.spokesman %>'", 3000);
 </script>
 
