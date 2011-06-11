@@ -695,7 +695,7 @@ button.abstencion span {
   z-index:10000;
   background: #E1E2DF url('../images/content.gif');
   width:650px;
-  height:320px;
+  height:370px;
   -moz-box-shadow:0 0 4px 5px #CCC;
   -webkit-box-shadow: 0 0 4px 5px #CCC;
 }
