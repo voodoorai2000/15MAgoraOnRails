@@ -9,9 +9,6 @@
     <header>
       <hgroup>
         <h2 class="title"><%=h @proposal.title %></h2>
-        <h3 class="proposal_type">
-          <%=h @proposal.proposal_type %> (<a class="official_url" href="<%= @proposal.official_url %>">Enlace oficial</a>)
-        </h3>
       </hgroup>
       <%= show_toggle_button(current_user.is_admin?) if current_user %>
       <ul class="meta">
