@@ -229,12 +229,13 @@ footer {
 }
 
 footer p {
+  float: right;
   color: #999;
 }
 
 #total-votes {
-  width: 231px;
-  float: right;
+  float: left;	
+  width: 720px;
   font-size: 1.3em;
 }
 
