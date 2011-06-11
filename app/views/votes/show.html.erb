@@ -1,13 +1,14 @@
-<h2>Hooray!!</h2>
-
-<p class="confirmation-message">
-  <strong>Tu voto ha sido contabilizado.</strong>
-</p>
-
-<p>
-  Si nadie lo remedia en 3 segundos te llevaremos a los resultados.
-</p>
-
+<section id="login-section">
+	<h2>¡Bien!</h2>
+	
+	<p class="confirmation-message">
+	  <strong>Tu voto ha sido contabilizado.</strong>
+	</p>
+	
+	<p>
+	  Si nadie lo remedia en 3 segundos te llevaremos a los resultados.
+	</p>
+</section>
 <script>
   var t = setTimeout("top.document.location.href = '<%= proposal_path @proposal %>'", 3000);  
 </script>
