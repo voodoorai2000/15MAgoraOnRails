@@ -8,6 +8,7 @@ feature "Feature name", %q{
 } do
   
   scenario "Navigate using categories" do
+    pending "Navigate using categories"
     create_proposal :title => "Ley Sinde", 
                     :category => create_category(:name => "Cultura")
     create_proposal :title => "Usar Google en los examenes", 
@@ -28,6 +29,7 @@ feature "Feature name", %q{
   end
   
   scenario "Navigate using proposers" do
+    pending "Navigate using proposers"
     create_proposal :title => "Ley Sinde", 
                     :proposer => create_proposer(:name => "Gobierno")
     create_proposal :title => "Usar Google en los examenes", 
@@ -47,6 +49,7 @@ feature "Feature name", %q{
   end
   
   scenario "Using proposer from a proposal" do
+    pending "Proposals of a proposer"
     proposal = create_proposal :proposer => create_proposer(:name => "Gobierno")
     
     visit homepage

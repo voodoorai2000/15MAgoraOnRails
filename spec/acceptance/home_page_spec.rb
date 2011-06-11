@@ -8,6 +8,7 @@ feature "Home page", %q{
 } do
   
   scenario "Hot proposals" do
+    pending "Hot proposals"
     create_proposal(:title => "Legalize it",         :position => 3)
     create_proposal(:title => "Cafe para todos",     :position => 6)
     create_proposal(:title => "Zapatero Dimisión",   :position => 5)
@@ -24,6 +25,7 @@ feature "Home page", %q{
   end
   
   scenario "Proposal information" do
+    pending "Proposal information"
     create_proposal :title => "Ley Sinde",
                     :proposer => create_proposer(:name => "Gobierno"),
                     :proposed_at => Date.new(2010, 4, 24)
@@ -36,6 +38,7 @@ feature "Home page", %q{
   end
   
   scenario "Recently closed proposals" do
+    pending "Recently closed proposals"
     create_proposal :title => "Legalize it",         :closed_at => 20.days.ago.to_date, :official_resolution => "Aceptada"
     create_proposal :title => "Cafe para todos",     :closed_at => 15.days.ago.to_date, :official_resolution => "Aceptada"
     create_proposal :title => "Zapatero Dimisión",   :closed_at => 23.days.ago.to_date, :official_resolution => "Aceptada"
@@ -56,6 +59,7 @@ feature "Home page", %q{
   end
   
   scenario "Categories" do
+    pending "Categories"
     love      = create_category(:name => "Love")
     economy   = create_category(:name => "Economy")
     health    = create_category(:name => "Health")
@@ -80,6 +84,7 @@ feature "Home page", %q{
   end
   
   scenario "Proposers" do
+    pending "Proposers"
     psoe     = create_proposer(:name => "PSOE")
     pp       = create_proposer(:name => "PP")
     pnv      = create_proposer(:name => "PNV")
@@ -105,13 +110,13 @@ feature "Home page", %q{
   scenario "Vote count" do
     visit homepage
     
-    page.should have_content("0 votos a través de AgoraOnRails")
+    page.should have_content("0 votos")
     
     3.times { create_vote }
     
     visit homepage
     
-    page.should have_content("3 votos a través de AgoraOnRails")
+    page.should have_content("3 votos")
   end
   
 end

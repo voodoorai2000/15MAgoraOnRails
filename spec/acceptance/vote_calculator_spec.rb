@@ -8,6 +8,7 @@ feature "Vote calculator", %q{
 } do
   
   scenario "Calculate representative vote distribution" do
+    pending "Calculate representative vote distribution"
     @admin = create_user(:name => "Administreitor", :admin => true)
     login_as @admin
     proposal = create_proposal(:title => "Ley Sinde",

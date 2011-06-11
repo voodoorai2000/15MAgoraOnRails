@@ -16,7 +16,7 @@ feature "Spokesmen", %q{
     rajoy = create_user :name => "Mariano"
     
     visit "/"
-    click_link "Usuari@s"
+    click_link "Ciudadanos"
 
     page.should have_css(".user .name a", :text => "Jose Luis", :href => user_path(zapatero))
     page.should have_css(".user .name a", :text => "Mariano", :href => user_path(rajoy))
