@@ -1,6 +1,6 @@
 = Minumum Consensus AgoraOnRails
 
-* http://consensodeminimos.agoraonrails.com/
+* http://consensodeminimos.agoraonrails.com
 
 == Description:
 
