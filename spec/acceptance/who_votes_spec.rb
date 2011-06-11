@@ -68,19 +68,29 @@ feature "Voters", %q{
     end
   end
   
-  scenario "See all users that have voted" do
-    user2  = create_user(:name => "Ignacio Escolar")
-    login_as user2
+  context "Multiple users" do
+    background do 
+      user2  = create_user(:name => "Ignacio Escolar")
+      login_as user2
+      
+      visit proposal_path(@proposal)
+      
+      click_button "Sí"
+      click_button "Estoy seguro"
+      visit root_path
+    end
     
-    visit proposal_path(@proposal)
+    scenario "See all users that have voted" do
+      within(:css, "#voters") do
+        page.should have_content("Andreu Buenafuente")
+        page.should have_content("Ignacio Escolar")
+      end
+    end
     
-    click_button "Sí"
-    click_button "Estoy seguro"
-    visit root_path
-    
-    within(:css, "#voters") do
-      page.should have_content("Andreu Buenafuente")
-      page.should have_content("Ignacio Escolar")
+    scenario "The last user that voted should be the first one displayed" do
+      within(:css, "#voters") do
+        all('li').first.text.strip.should == "Ignacio Escolar"
+      end
     end
   end
   

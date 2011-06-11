@@ -42,6 +42,6 @@ class ApplicationController < ActionController::Base
     end
     
     def load_users    
-      @users = User.all
+      @users = User.order("created_at DESC")
     end
 end
