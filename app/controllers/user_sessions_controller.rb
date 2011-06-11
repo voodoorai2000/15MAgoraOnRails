@@ -2,7 +2,7 @@ class UserSessionsController < ApplicationController
   include Tractis::IdentityVerifications
   
   before_filter :require_user, :only => :destroy
-  layout proc{ |c| c.request.xhr? ? "mini_application" : "application" }
+  layout "mini_application"
   
   def new
   end
