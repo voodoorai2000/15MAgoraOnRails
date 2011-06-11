@@ -1,19 +1,20 @@
 <% @current_tab = "Ciudadanos" %>
 
 <section id="user_list">
-	<header>
-		<h2>Ciudadan@s presentes en AgoraOnRails</h2>
-		<p>
-			Puedes delegar tu voto en ell@s para las propuestas en las que no votes directamente.
-		</p>
+	<header class="proposal-head">
+	  <strong>Ciudadanos que han votado</strong>
 	</header>
 	<% for user in @users do %>
-		<article class="user">
-			<header>
-				<h3 class="name"><%= link_to user.name, user %></h3>
-			</header>
-			
-			<p class="link"> <%= user.link %></p>
+		<article class="proposal">
+			<section class="proposal-content">
+				<header>
+					<h2 class="title"><%= link_to user.name, user %></h2>
+				</header>
+			</section>
+			<section class="voters">
+			      <strong><%= link_to "Ver votos", user, :class => "vote-link" %></strong>
+			</section>
+			<span class="decorate up"></span>
 		</article>
 	<% end %>
 </section>

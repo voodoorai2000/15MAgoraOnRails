@@ -58,6 +58,10 @@ fieldset {
   border: none;
 }
 
+label {
+  color: #fff;	
+}
+
 .notice {
   clear: both;
   display: block;
