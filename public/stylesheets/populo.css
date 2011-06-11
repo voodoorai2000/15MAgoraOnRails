@@ -592,7 +592,7 @@ button.abstencion span {
 /* tag list */
 
 .tag_list {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .tag_list dt {
@@ -679,6 +679,21 @@ button.abstencion span {
 
 .tag_list .tag-9 {
   width: 5%;
+}
+
+a.allusers {
+  background: none repeat scroll 0 0 #66b9af;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #FFFFFF;
+  display: block;
+  font-size: 1em;
+  list-style: none outside none;
+  overflow: hidden;
+  padding: 7px 25px 7px 10px;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #333333;
+  white-space: nowrap;
 }
 
 /* welcome */
