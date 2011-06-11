@@ -35,4 +35,12 @@ module ApplicationHelper
       "<strong>Vota!</strong> #{pluralize(proposal.votes.count, 'persona ya lo ha hecho', 'personas ya lo han hecho')}".html_safe
     end
   end
+  
+  def link_to_tab(name, url)
+    link_to name, url, :class => tab_css_classes(name)
+  end
+  
+  def tab_css_classes(name)
+    @current_tab == name ? "active" : ""
+  end
 end

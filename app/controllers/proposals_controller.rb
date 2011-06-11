@@ -7,7 +7,7 @@ class ProposalsController < InheritedResources::Base
   helper_method :parent, :parent_type
   
   respond_to :html, :xml
-
+  
   def show
     @proposal = Proposal.find(params[:id])
     @proposal.visited!

@@ -1,4 +1,5 @@
 <% @title = "#{@user.name}" %>  
+<% @current_tab = "Ciudadanos" %>
 
 <% if current_user && current_user.spokesman == @user %>
   <%= form_for @user, :url => discharge_as_spokesman_user_path(@user) do |f| -%>

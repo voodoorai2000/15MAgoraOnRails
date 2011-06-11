@@ -1,6 +1,7 @@
 <%= render 'opengraph' %>
 
 <% @title = "#{awesome_truncate(@proposal.title, 100)}" %>
+<% @current_tab = "Propuestas" %>
   
 <article class="proposal" id="proposal_<%= @proposal.id %>">
   <section class="proposal-content">
