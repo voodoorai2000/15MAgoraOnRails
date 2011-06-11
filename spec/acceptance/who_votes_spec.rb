@@ -91,6 +91,12 @@ feature "Voters", %q{
       within(:css, "#voters") do
         all('li').first.text.strip.should == "Ignacio Escolar"
       end
+      
+      visit proposals_path
+      
+      within(:css, "#voters") do
+        all('li').first.text.strip.should == "Ignacio Escolar"
+      end
     end
     
     scenario "See all citizens" do
