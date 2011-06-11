@@ -1,6 +1,5 @@
-<h2>Autenticación con DNIe requerida</h2>
-
 <section id="login-section">
+  <h2>Autenticación con DNIe requerida</h2>
   <div style="margin-bottom: 10px;">
     <%= identity_verification_gateway("Identifícate con tu DNIe", ENV["TRACTIS_API_KEY"], :action => 'authenticate') %>
   </div>

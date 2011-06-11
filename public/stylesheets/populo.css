@@ -59,6 +59,7 @@ fieldset {
 }
 
 .notice {
+  clear: both;
   display: block;
   font-size: 1.2em;
   padding: 5px;
@@ -720,13 +721,34 @@ button.abstencion span {
 }
 
 /* loginform */
-
+/*
 #login-section {
   float: left;
   width: 280px;
   padding-right: 20px;
   margin: 0 20px 5px 0;
   border-right: 1px dotted #ccc;
+}
+*/
+#login-section {
+  text-align: center;
+}
+
+#login-section input {
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #333;
+  background: #333;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  width: auto;
+  overflow: visible;
+  -o-box-shadow: 1px 1px 1px #999;
+  -icab-box-shadow: 1px 1px 1px #999;
+  -khtml-box-shadow: 1px 1px 1px #999;
+  -moz-box-shadow: 1px 1px 1px #999;
+  -webkit-box-shadow: 1px 1px 1px #999;
+  box-shadow: 1px 1px 1px #999;
 }
 
 .confirmation-message {
