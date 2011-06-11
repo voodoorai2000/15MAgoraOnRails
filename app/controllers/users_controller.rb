@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_filter :load_users
   
   def index
-    @users = User.all
+    @users = User.order("created_at DESC")
   end
 
   def new

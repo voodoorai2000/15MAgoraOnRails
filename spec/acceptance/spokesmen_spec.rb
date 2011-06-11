@@ -21,6 +21,16 @@ feature "Spokesmen", %q{
     page.should have_css(".user .name a", :text => "Jose Luis", :href => user_path(zapatero))
     page.should have_css(".user .name a", :text => "Mariano", :href => user_path(rajoy))
   end
+  
+  scenario "Display users in the order they where created" do
+    zapatero = create_user :name => "Jose Luis"
+    rajoy = create_user :name => "Mariano"
+    
+    visit "/"
+    click_link "Ciudadanos"
+
+    all('.user .name a').first.text.strip.should == "Mariano"
+  end
     
   scenario "Choose spokesman" do
     fan_de_punset = create_user :name => "Fan de Punset"
