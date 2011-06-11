@@ -2,9 +2,9 @@
 
 <p class="confirmation-message">
   <strong>Tu voto ha sido contabilizado.</strong>
-  Si nadie lo remedia en 5 segundos te llevaremos a los resultados.
+  Si nadie lo remedia en 3 segundos te llevaremos a los resultados.
 </p>
 
 <script>
-  var t = setTimeout("top.document.location.href = '<%= proposal_path @proposal %>'", 5000);  
+  var t = setTimeout("top.document.location.href = '<%= proposal_path @proposal %>'", 3000);  
 </script>
